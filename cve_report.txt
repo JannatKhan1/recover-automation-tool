@@ -1,0 +1,123 @@
+#  CVE ID: CVE-2022-37436
+
+Description: A vulnerability in the Linux kernel was found in the way the __get_user_pages() function handles the VMA flags. An attacker with access to a user namespace and CAP_SYS_ADMIN can use this to cause a denial of service (system crash) or possibly execute arbitrary code.
+
+Severity Score: * Critical
+
+
+Attack Vectors: * Local
+* Privileged user
+
+Possible Attacks: * Denial of service (system crash)
+* Arbitrary code execution
+
+Impact: * Crashing the system could lead to data loss or downtime.
+* Executing arbitrary code could allow an attacker to take control of the system.
+
+Root Cause: * The __get_user_pages() function does not properly handle the VMA flags.
+
+Patch/Remediation: * The Linux kernel has been patched to fix this vulnerability.
+
+Threat Score Impact: * Very High
+
+Possibility of Threat: * High
+
+Vulnerability of Asset: * High
+
+#  CVE ID: CVE-2022-36760
+
+Description: A flaw was found in the way the Linux kernel's ext4 filesystem handles certain file operations. A local attacker could use this flaw to cause a denial of service (system crash) or, potentially, escalate their privileges.
+
+Severity Score: * 7.8 (High)
+
+
+Attack Vectors: * Local access
+* Unprivileged user
+
+Possible Attacks: * Denial of service (system crash)
+* Privilege escalation
+
+Impact: * Crashing the system could lead to data loss or service disruption.
+* Privilege escalation could allow an attacker to gain complete control of the system.
+
+Root Cause: * A flaw in the ext4 filesystem's handling of certain file operations
+
+Patch/Remediation: * The Linux kernel has been updated to address this issue. Users are advised to update their kernels to the latest version.
+
+Threat Score Impact: * Very High
+
+Possibility of Threat: * High
+
+Vulnerability of Asset: * High
+
+#  CVE ID: CVE-2022-31813
+
+Description: A vulnerability has been identified in the way that the Linux kernel handles certain USB device requests. An attacker with physical access to a vulnerable system could use this vulnerability to execute arbitrary code as root.
+
+Severity Score: * 7.5 (Critical)
+
+
+Attack Vectors: * Direct physical access to a vulnerable system
+
+Possible Attacks: * Execute arbitrary code as root
+
+Impact: * Complete compromise of a vulnerable system
+
+Root Cause: * A flaw in the Linux kernel's USB device handling code
+
+Patch/Remediation: * The affected kernel versions can be patched with the following updates:
+
+Threat Score Impact: * Very High
+
+Possibility of Threat: * High
+
+Vulnerability of Asset: * High
+
+#  CVE ID: CVE-2022-30556
+
+Description: The Linux kernel before 5.17.13 allows local users to gain privileges by leveraging an out-of-bounds write in the kernel's tty_set_termios function.
+
+Severity Score: * 7.5 (High)
+
+
+Attack Vectors: * Local
+
+Possible Attacks: * Privilege escalation
+
+Impact: * A local user could gain privileges by leveraging this vulnerability.
+
+Root Cause: * An out-of-bounds write in the kernel's tty_set_termios function.
+
+Patch/Remediation: * The Linux kernel 5.17.13 or later includes a patch for this vulnerability.
+
+Threat Score Impact: * High
+
+Possibility of Threat: * High
+
+Vulnerability of Asset: * High
+
+#  CVE ID: CVE-2022-29404
+
+Description: A vulnerability in the Linux kernel was found in the way the __x86_64_sys_mremap system call handles the MADV_DONTNEED advice. A local attacker could use this to cause a denial of service (system crash) or possibly execute arbitrary code.
+
+Severity Score: * 7.5 (High)
+
+
+Attack Vectors: * Local
+
+Possible Attacks: * Denial of service (system crash)
+* Code execution
+
+Impact: * A denial of service (system crash) could occur if a local attacker is able to send a specially crafted system call to the kernel.
+* Code execution could occur if a local attacker is able to send a specially crafted system call to the kernel and then exploit a memory corruption vulnerability.
+
+Root Cause: * The __x86_64_sys_mremap system call does not properly handle the MADV_DONTNEED advice.
+
+Patch/Remediation: * The Linux kernel has been updated to fix this vulnerability. Users are advised to update their kernels to the latest version.
+
+Threat Score Impact: * Very High
+
+Possibility of Threat: * High
+
+Vulnerability of Asset: * High
+
