@@ -1,5 +1,3 @@
-
-# Gitisha ne bola h comment krne ko, mera man toh delete krne ka tha
 # def operation():
 #     print(" 1.  \n 2. Integrity Checker \n 3.  \n 4. Exit")
 #     print("Enter the operation you want to perform: ")
@@ -11,16 +9,40 @@
 #     if(type(a) != int):
 #         print("Enter a number!")
 #     if(a < 1 or a>4):
-#         print("Enter the number between 1 to 4 !")            
+#         print("Enter the number between 1 to 4 !")   
+
+import os
+import subprocess  
+
+def run_jupyter_notebook(csv_path):
+    # Run the Jupyter notebook
+    notebook_file = "Recovery_Automation.ipynb"
+    # Execute the notebook with papermill
+    os.system(f'jupyter nbconvert --execute {notebook_file} --ExecutePreprocessor.timeout=180 --to notebook --output {notebook_file} --execute "{csv_path}"')
 
 def main():
     print("Welcome to Recover Function")
     while True:
         print("Enter your choice : ")
         print("1. Risk Assessment Report ")
-        print("2. Backup the data with Veeam Agent and Integrity Checker")
+        print("2. Integrity Checker")
         
         ch = int(input())
+
+        if ch == 1:
+            print("Please enter the path to the CSV file containing vulnerabilities of system: ")
+            csv_path = input().strip()
+            if os.path.isfile(csv_path):
+                run_jupyter_notebook(csv_path)
+                print("Risk Assessment Report generated successfully!")
+                print(" You can find the report in file named 'cve_report.txt' !")
+            else:
+                print("Invalid path or file does not exist.")
+        elif ch == 2:
+            # Add functionality for option 2 here
+            pass
+        else:
+            print("Invalid choice!")
 
         print("Repeat? (y/n)")
         if input().lower() != 'y':
