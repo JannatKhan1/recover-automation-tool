@@ -14,6 +14,9 @@
 import os
 import subprocess  
 
+# Gitisha ye run jupyter wala ab kaam nhi krega i have converted it to .py
+# toh iske jagah .py file execute krne ki koshish kro
+# plus recovery_automation.py ko bhi change krna padega 
 def run_jupyter_notebook(csv_path):
     # Run the Jupyter notebook
     notebook_file = "Recovery_Automation.ipynb"
