@@ -27,7 +27,7 @@ def main():
             else:
                 print("Invalid path or file does not exist.")
         elif ch == 2:
-            open("word") 
+            open("UiPath Studio") 
             pass
         else:
             print("Invalid choice!")
