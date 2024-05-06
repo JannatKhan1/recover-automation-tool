@@ -1,22 +1,6 @@
-# def operation():
-#     print(" 1.  \n 2. Integrity Checker \n 3.  \n 4. Exit")
-#     print("Enter the operation you want to perform: ")
-#     user_input = int(input())
-#     return user_input
-
-# a = operation()
-# while(a != 4):
-#     if(type(a) != int):
-#         print("Enter a number!")
-#     if(a < 1 or a>4):
-#         print("Enter the number between 1 to 4 !")   
-
 import os
 import subprocess  
 
-# Gitisha ye run jupyter wala ab kaam nhi krega i have converted it to .py
-# toh iske jagah .py file execute krne ki koshish kro
-# plus recovery_automation.py ko bhi change krna padega 
 def run_jupyter_notebook(csv_path):
     # Run the Jupyter notebook
     notebook_file = "Recovery_Automation.ipynb"
@@ -54,5 +38,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    
 
     
