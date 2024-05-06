@@ -1,5 +1,7 @@
 import os
-import subprocess  
+import subprocess 
+from AppOpener import open
+
 
 def run_jupyter_notebook(csv_path):
     # Run the Jupyter notebook
@@ -26,7 +28,7 @@ def main():
             else:
                 print("Invalid path or file does not exist.")
         elif ch == 2:
-            # Add functionality for option 2 here
+            open("word") 
             pass
         else:
             print("Invalid choice!")
